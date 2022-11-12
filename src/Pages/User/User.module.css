@@ -1,0 +1,105 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #512689;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.headerContent {
+    display: flex;
+    margin-right: 65rem;
+    min-height: 187px;
+}
+
+button {
+    border: 1px solid #F8F8F8;
+    border-radius: 8px;
+    padding: 8px 16px;
+    color: #F8F8F8;
+    background-color: #512689;
+    margin-top: 31px;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 187px;
+    height: 187px;
+    min-height: 187px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    margin: 39px 32px 39px 0;
+}
+
+.name {
+    font-size: 64px;
+    line-height: 75px;
+    margin-bottom: 16px;
+    margin-top: 68px;
+}
+
+.backButton {
+    margin-left: 80px;
+}
+
+.button {
+    margin-right: 80px;
+}
+.content {
+    padding: 15px;
+
+}
+
+@media (max-width: 375px) {
+    .container {
+        width: 100%;
+    }
+
+    .headerContent {
+        width: 334px;
+        margin: 0 -10%;
+        text-align: center;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 3.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .name {
+        font-size: 36px;
+        margin: 0;
+
+    }
+.backButtonContainer  {
+    margin-top: .2rem;
+    margin-left: -3rem;
+}
+    .button {
+        margin-right: 2rem;
+    }
+    .exitButton {
+        border: none;
+        background-repeat: no-repeat;
+        border-radius: 0;
+        padding: 10px;
+        backgroundPosition: top;
+
+    }
+
+    .backButton {
+        border: none;
+        background-repeat: no-repeat;
+
+    }
+
+    .avatar {
+        margin: 0 auto;
+
+    }
+    .content {
+        padding: 10px;
+        text-align: center;
+    }
+}

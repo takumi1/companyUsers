@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    margin-top: 48px;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: #512689;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+.text {
+    width: 846px;
+    margin: 0 auto;
+}
+.title {
+    font-size: 64px;
+    line-height: 75px;
+    margin-bottom: 16px;
+}
+
+.description {
+    font-size: 20px;
+    line-height: 23.5px;
+
+    margin-bottom: 64px;
+
+}
+
+.button {
+    display: flex;
+    justify-content: right;
+}
+
+.exitButton {
+    border: 1px solid #F8F8F8;
+    border-radius: 8px;
+    padding: 8px 16px;
+    color: #F8F8F8;
+    background-color: #512689;
+    margin-top: 32px;
+    margin-right: 80px;
+    cursor: pointer;
+}
+.loadMoreButton {
+    margin: 2rem 45%;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    background-image: url("../../assets/loadMoreVector.png");
+    background-repeat: no-repeat;
+    background-position: 112px 12px;
+    padding-right: 35px;
+}
+
+@media (max-width: 375px) {
+    .text {
+        width: 334px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .title {
+        font-size: 36px;
+    }
+    .description {
+        font-size: 16px;
+    }
+.exitButton {
+    border: none;
+    background-repeat: no-repeat;
+    border-radius: 0;
+    padding: 10px;
+    backgroundPosition: top;
+    margin-right: 2rem;
+}
+    .loadMoreButton {
+        margin: 0 30%;
+    }
+}

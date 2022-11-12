@@ -10,6 +10,7 @@ const Auth = () => {
     const passConfirm = React.useRef(null);
     const [isEmailValid, setIsEmailValid] = useState(true)
     const [isPassValid, setIsPassValid] = useState(true)
+    const [enterAttemptRender, setEnterAttemptRender] = useState(0)
     const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -23,17 +24,24 @@ const Auth = () => {
                 setIsEmailValid(false)
             }
         })
+        setEnterAttemptRender(prev => prev + 1);
+    }
+    const redirect = () => {
+
+        if (localStorage.getItem('authToken') && isPassValid && isEmailValid) {
+            navigate('/userslist');
+        }
+
     }
     useEffect(() => {
-        if (localStorage.getItem('authToken') && isPassValid && isEmailValid) {
-            navigate('/userslist');
-        }
+        redirect()
     }, [isPassValid])
     useEffect(() => {
-        if (localStorage.getItem('authToken') && isPassValid && isEmailValid) {
-            navigate('/userslist');
-        }
+        redirect()
     }, [isEmailValid])
+    useEffect(() => {
+        redirect()
+    }, [enterAttemptRender])
     return (
         <div>
             <form onSubmit={handleSubmit} className={s.form} action="" method="get">

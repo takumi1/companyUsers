@@ -3,7 +3,6 @@ import {Route, Routes} from "react-router";
 import UsersList from "./Pages/UsersList/UsersList";
 import User from "./Pages/User/User";
 import Auth from "./Pages/Auth/Auth";
-import Notfound from "./Pages/Notfound/Notfound";
 
 function App() {
   return (
@@ -12,7 +11,6 @@ function App() {
                 <Route path="/" element={<Auth />} />
                 <Route path="userslist" element={<UsersList />} />
                 <Route path="user/:id" element={<User />} />
-                <Route path="notfound" element={<Notfound />} />
             </Routes>
     </div>
   );
